@@ -30,7 +30,7 @@ RUN cockroach cert create-node lb --certs-dir=/tmp/certs/lb --ca-key=/tmp/safe/c
 
 # Stage 2 - share certs
 
-FROM alpine:3
+FROM cockroachdb/cockroach:latest-v21.2
 
 RUN mkdir -pv /certs/roach-0 /certs/roach-1 /certs/roach-2 /certs/client /certs/lb
 
